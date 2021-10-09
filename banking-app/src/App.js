@@ -48,8 +48,8 @@ const App = () => {
                 <Tab label="Factures payées" value="2" />
               </TabList>
             </Box>
-            <TabPanel value="1"><Facturepaye /></TabPanel>
-            <TabPanel value="2"><Paspayer/></TabPanel>
+            <TabPanel value="1"><Paspayer /></TabPanel>
+            <TabPanel value="2"><Facturepaye/></TabPanel>
           </TabContext>
         </Box>
 
