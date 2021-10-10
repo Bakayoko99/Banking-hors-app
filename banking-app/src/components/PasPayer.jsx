@@ -56,13 +56,25 @@ const Paspayer = () => {
 
     }
 
-    const test = () => {
-        const num = 243000
+    const formatNumber = (num) => {
 
-        console.log("test :",new Intl.NumberFormat('en-IN',{style: "currency", currency: "EUR"}).format(num));
+        const number = num.toFixed(2).replace(".", ",")
+
+        const ok = number.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ')
+
+        return ok
+
+        // console.log("formatNumber: ", ok);
     }
 
-    test()
+    // formatNumber(500000)
+
+    const addDays = (date, days) => {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result.toLocaleDateString("fr-FR");
+        // console.log("addDays: ", result.toLocaleDateString("en-US"));
+    }
 
 
     return (
@@ -75,13 +87,13 @@ const Paspayer = () => {
 
                         <Grid item xs={4}>
                             <p><Checkbox />{elem.invoiceNumber}</p>
-                            <p>date</p>
+                            <p>A régler avant le {addDays(elem.sentDate, elem.maxDaysToPay)}</p>
                         </Grid>
                         <Grid item xs={4}>
                             <p>{paymentOptions(elem.multiPaymentStatus, elem.discount)}</p>
                         </Grid>
                         <Grid item xs={4}>
-                            <p>{elem.amount}</p>
+                            <p>{formatNumber(parseInt(elem.amount))} €</p>
                         </Grid>
                     </Grid>
 
