@@ -36,7 +36,7 @@ const App = () => {
             bgcolor: 'background.paper',
             width: 500,
             position: 'relative',
-            mt: 5,
+            mt: 2,
             mr: 50
           }}
         />
@@ -54,7 +54,7 @@ const App = () => {
         </Box>
 
       </Paper>
-
+        
     </Box>
   );
 }

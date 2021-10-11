@@ -1,0 +1,53 @@
+
+
+.price{
+    text-align: end;
+    font-weight: bold;
+}
+
+.allOptions{
+    margin-left: 62px;
+}
+
+.factureN{
+    height: 10px;
+    font-weight: bold;
+}
+
+.deadLine{
+    margin-left: 40px;
+    font-size: small;
+    color: #ABB0AF;
+}
+
+.pOptions2{
+    font-size: small;
+    color: #10BC91;
+
+}
+
+.pOptions{
+    height: 10px;
+    font-weight: bold;
+
+}
+
+
+#payButton{
+position: absolute;
+right:    0;
+bottom:   0;
+background-color: #10BC91;
+color: white;
+}
+
+.oki{
+    position: relative;
+    margin-top: 65px;
+}
+
+#flash{
+    color: #10BC91;
+    height: 16px;
+}
+
