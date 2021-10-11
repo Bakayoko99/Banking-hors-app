@@ -176,7 +176,7 @@ const Paspayer = () => {
 
             <Box sx={{ flexGrow: 1 }}>
                 {facture.map((elem) =>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} key={elem.invoiceNumber}>
 
                         <Grid item xs={4}>
                             <div>
@@ -205,7 +205,7 @@ const Paspayer = () => {
 
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2">
+                    <Typography id="modal-modal-title" variant="h6" component="div">
                         Payement sécurisé par prélèvement bancaire
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>

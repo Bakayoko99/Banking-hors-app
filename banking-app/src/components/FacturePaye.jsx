@@ -91,7 +91,7 @@ const Facturepaye = () => {
 
              <Box sx={{ flexGrow: 1 }}>
                 {facture.map((elem) =>
-                    <Grid container spacing={2}>
+                    <Grid container spacing={2} key={elem.invoiceNumber}>
 
                         <Grid item xs={4}>
                             <div>
